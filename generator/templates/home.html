@@ -1,27 +1,40 @@
-<form action='password'>
-    <h1>Generador de Contraseñas</h1>
-    <label for='length'>Seleciona la longitud de la contraseña</label>
-    <select name='length' id='length'>
-        <option value='6'>6 caracteres</option>
-        <option value="7">7 caracteres</option>
-        <option value="8">8 caracteres</option>
-        <option value="9">9 caracteres</option>
-        <option value="10">10 caracteres</option>
-        <option value="11">11 caracteres</option>
-        <option value="12">12 caracteres</option>
-        <option value="13">13 caracteres</option>
-        <option value="14">14 caracteres</option> 
-    </select>
+{% extends 'layaout.html'%}
 
-    <label for='uppercase'>Mayusculas</label>
-    <input type='checkbox' name='uppercase' id='uppercase'>
+{% block content%}
+<div class="col-md-4 offset-md-4">
+    <form action="{% url 'password'%}" class="card card-body p-5" style="background-color: #1b1f22;">
+        <h1 class="h5">Generador de Contraseñas</h1>
+        <label for='length'>Seleciona la longitud de la contraseña</label>
+        <select name='length' id='length' class="form-control">
+            <option value='6'>6 caracteres</option>
+            <option value="7">7 caracteres</option>
+            <option value="8">8 caracteres</option>
+            <option value="9">9 caracteres</option>
+            <option value="10">10 caracteres</option>
+            <option value="11">11 caracteres</option>
+            <option value="12">12 caracteres</option>
+            <option value="13">13 caracteres</option>
+            <option value="14">14 caracteres</option>
+        </select>
 
-    <label for='especial'>Caracteres Especiales</label>
-    <input type="checkbox" name="especial" id="especial">
+        <div class="form-check form-switch my-2">
+            <label for='uppercase' class="form-check-label">Mayusculas</label>
+            <input type='checkbox' name='uppercase' id='uppercase' class="form-check-input">
+        </div>
 
-    <label for="numbers">Numeros</label>
-    <input type="checkbox" name="numbers" id="numbers">
+        <div class="form-check form-switch my-2">
+            <label for='especial'>Caracteres Especiales</label>
+            <input type="checkbox" name="especial" id="especial" class="form-check-input">
+        </div>
 
-    <button>Generar Contraseña</button>
+        <div class="form-check form-switch my-2">
+            <label for="numbers">Numeros</label>
+            <input type="checkbox" name="numbers" id="numbers" class="form-check-input">
+        </div>
+        <button class="btn btn-primary">Generar Contraseña</button>
 
-</form>
+        
+
+    </form>
+</div>
+{% endblock %}

@@ -5,7 +5,9 @@ import string
 
 def home(request):
     return render(request, 'home.html')
-    
+
+def about(request):
+    return render(request,  'about.html')
 
 def password(request):
     characters = list(string.ascii_lowercase)
