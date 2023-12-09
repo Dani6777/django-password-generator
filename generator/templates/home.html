@@ -1,8 +1,8 @@
-<form>
+<form action='password'>
     <h1>Generador de Contraseñas</h1>
     <label for='length'>Seleciona la longitud de la contraseña</label>
     <select name='length' id='length'>
-        <option value='6'> 6 caracteres</option>
+        <option value='6'>6 caracteres</option>
         <option value="7">7 caracteres</option>
         <option value="8">8 caracteres</option>
         <option value="9">9 caracteres</option>
@@ -12,5 +12,16 @@
         <option value="13">13 caracteres</option>
         <option value="14">14 caracteres</option> 
     </select>
+
+    <label for='uppercase'>Mayusculas</label>
+    <input type='checkbox' name='uppercase' id='uppercase'>
+
+    <label for='especial'>Caracteres Especiales</label>
+    <input type="checkbox" name="especial" id="especial">
+
+    <label for="numbers">Numeros</label>
+    <input type="checkbox" name="numbers" id="numbers">
+
+    <button>Generar Contraseña</button>
 
 </form>
